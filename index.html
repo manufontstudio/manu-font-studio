@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MANU FONT STUDIO</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+    }
+
+    body {
+      background: #080808;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #1d1d1d);
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #ff2b2b;
+    }
+
+    .tagline {
+      margin-top: 7px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 45px 20px;
+      background:
+        radial-gradient(circle at top, #3a1010, transparent 55%),
+        #080808;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      color: #ff3030;
+    }
+
+    .hero p {
+      color: #bbb;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .search-box {
+      max-width: 600px;
+      margin: 25px auto 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #444;
+      background: #151515;
+      color: white;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-box button {
+      padding: 15px 20px;
+      border: none;
+      border-radius: 12px;
+      background: #ff3030;
+      color: white;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .section-title {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .section-title span {
+      color: #ff3030;
+    }
+
+    .categories {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .category {
+      padding: 10px 17px;
+      border: 1px solid #444;
+      border-radius: 30px;
+      color: #ddd;
+      background: #121212;
+      cursor: pointer;
+    }
+
+    .category.active {
+      background: #ff3030;
+      border-color: #ff3030;
+      color: white;
+    }
+
+    .font-card {
+      background: #121212;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 18px;
+      transition: 0.2s;
+    }
+
+    .font-card:hover {
+      border-color: #ff3030;
+      transform: translateY(-2px);
+    }
+
+    .font-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .preview {
+      background: #080808;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 27px;
+      margin-bottom: 15px;
+      border: 1px solid #252525;
+    }
+
+    .font-info {
+      color: #999;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      border: none;
+      padding: 11px 17px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .preview-btn {
+      background: #292929;
+      color: white;
+    }
+
+    .download-btn {
+      background: #ff3030;
+      color: white;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 30px 20px;
+      text-align: center;
+      background: #111;
+      border-top: 1px solid #292929;
+      color: #888;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box button {
+        width: 100%;
+      }
+
+      .preview {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      MANU <span>FONT</span> STUDIO
+    </div>
+
+    <div class="tagline">
+      Premium Hindi & English Fonts
+    </div>
+  </header>
+
+
+  <section class="hero">
+
+    <h1>
+      Find Your <span>Perfect Font</span>
+    </h1>
+
+    <p>
+      Hindi और English editing के लिए शानदार fonts खोजें,
+      preview करें और अपनी पसंद का font चुनें।
+    </p>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Font खोजें..."
+        onkeyup="searchFonts()"
+      >
+
+      <button onclick="searchFonts()">
+        Search
+      </button>
+    </div>
+
+  </section>
+
+
+  <main class="container">
+
+    <h2 class="section-title">
+      <span>Font</span> Categories
+    </h2>
+
+    <div class="categories">
+
+      <div class="category active" onclick="filterFonts('all')">
+        All Fonts
+      </div>
+
+      <div class="category" onclick="filterFonts('hindi')">
+        Hindi Fonts
+      </div>
+
+      <div class="category" onclick="filterFonts('english')">
+        English Fonts
+      </div>
+
+      <div class="category" onclick="filterFonts('editing')">
+        Editing Fonts
+      </div>
+
+    </div>
+
+
+    <h2 class="section-title">
+      Popular <span>Fonts</span>
+    </h2>
+
+
+    <div id="fontList">
+
+
+      <div class="font-card" data-category="hindi">
+
+        <div class="font-name">
+          Hindi Stylish Font
+        </div>
+
+        <div class="preview">
+          नमस्ते भारत 🇮🇳
+        </div>
+
+        <div class="font-info">
+          Category: Hindi • Free Preview
+        </div>
+
+        <div class="buttons">
+
+          <button class="btn preview-btn"
+            onclick="changeText(this)">
+            Change Text
+          </button>
+
+          <button class="btn download-btn"
+            onclick="downloadMessage()">
+            Download
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="font-card" data-category="english">
+
+        <div class="font-name">
+          Modern Creator Font
+        </div>
+
+        <div class="preview">
+          MANU FONT STUDIO
+        </div>
+
+        <div class="font-info">
+          Category: English • Creator Style
+        </div>
+
+        <div class="buttons">
+
+          <button class="btn preview-btn"
+            onclick="changeText(this)">
+            Change Text
+          </button>
+
+          <button class="btn download-btn"
+            onclick="downloadMessage()">
+            Download
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="font-card" data-category="editing">
+
+        <div class="font-name">
+          YouTube Editing Font
+        </div>
+
+        <div class="preview">
+          EDIT LIKE A PRO 🔥
+        </div>
+
+        <div class="font-info">
+          Category: Video Editing • Shorts • Reels
+        </div>
+
+        <div class="buttons">
+
+          <button class="btn preview-btn"
+            onclick="changeText(this)">
+            Change Text
+          </button>
+
+          <button class="btn download-btn"
+            onclick="downloadMessage()">
+            Download
+          </button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <strong>MANU FONT STUDIO</strong>
+
+    <br><br>
+
+    © 2026 MANU FONT STUDIO • All Rights Reserved
+
+  </footer>
+
+
+  <script>
+
+    function searchFonts() {
+
+      const search =
+        document.getElementById("searchInput")
+        .
