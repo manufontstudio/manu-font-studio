@@ -3,313 +3,394 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MANU Fonts</title>
+
+<title>MANU Fonts — Free Font Library</title>
 
 <style>
 *{
   box-sizing:border-box;
-  margin:0;
-  padding:0;
 }
 
 body{
-  background:#080808;
-  color:#fff;
+  margin:0;
+  background:#fff;
+  color:#111;
   font-family:Arial,"Noto Sans Devanagari",sans-serif;
 }
 
-header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#090909;
-  border-bottom:1px solid #242424;
-  padding:14px 16px;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-.nav{
-  max-width:1000px;
+.top{
+  background:#111;
+  color:#fff;
+  padding:7px 15px;
+  font-size:12px;
+}
+
+.top-inner,
+.header-inner,
+.main,
+.footer-inner{
+  max-width:1100px;
   margin:auto;
+}
+
+.top-inner{
   display:flex;
-  align-items:center;
   justify-content:space-between;
 }
 
-.brand{
+.header{
+  background:#e30613;
+  color:#fff;
+  padding:15px;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
   display:flex;
   align-items:center;
   gap:10px;
 }
 
-.logo{
-  width:38px;
-  height:38px;
-  border-radius:11px;
-  background:#e50914;
+.logo-box{
+  width:48px;
+  height:48px;
+  background:#fff;
+  color:#e30613;
   display:flex;
   align-items:center;
   justify-content:center;
+  font-size:22px;
   font-weight:900;
-  font-size:15px;
-  box-shadow:0 0 20px rgba(229,9,20,.3);
+  border-radius:5px;
 }
 
-.brand-name{
-  font-size:19px;
-  font-weight:800;
-}
-
-.brand-name span{
-  color:#e50914;
-}
-
-.menu{
+.logo-text{
   font-size:24px;
+  font-weight:900;
 }
 
-.hero{
-  padding:45px 18px 35px;
-  text-align:center;
-  background:
-    radial-gradient(circle at 50% 0%,#3b0b0b 0%,#080808 55%);
-}
-
-.hero h1{
-  font-size:38px;
-  line-height:1.1;
-  margin-bottom:12px;
-}
-
-.hero h1 span{
-  color:#e50914;
-}
-
-.hero p{
-  color:#aaa;
-  max-width:600px;
-  margin:auto;
-  line-height:1.6;
+.logo-text span{
+  font-weight:400;
 }
 
 .search{
-  max-width:650px;
-  margin:25px auto 0;
   display:flex;
-  background:#151515;
-  border:1px solid #333;
-  border-radius:14px;
-  padding:6px;
+  max-width:430px;
+  width:100%;
 }
 
 .search input{
   flex:1;
+  height:40px;
   border:0;
-  outline:0;
-  background:transparent;
-  color:#fff;
-  padding:13px;
-  font-size:16px;
+  padding:0 12px;
+  outline:none;
+  font-size:15px;
 }
 
 .search button{
+  width:80px;
   border:0;
-  background:#e50914;
-  color:white;
-  padding:0 18px;
-  border-radius:10px;
+  background:#222;
+  color:#fff;
   font-weight:bold;
 }
 
-.container{
-  max-width:1000px;
+.nav{
+  background:#f1f1f1;
+  border-bottom:1px solid #ccc;
+}
+
+.nav-inner{
+  max-width:1100px;
   margin:auto;
-  padding:25px 16px;
-}
-
-.section-title{
-  font-size:23px;
-  margin-bottom:15px;
-}
-
-.section-title span{
-  color:#e50914;
-}
-
-.categories{
   display:flex;
-  gap:9px;
-  overflow-x:auto;
-  padding-bottom:8px;
-  margin-bottom:28px;
+  flex-wrap:wrap;
 }
 
-.categories::-webkit-scrollbar{
-  display:none;
+.nav a{
+  padding:11px 14px;
+  font-size:14px;
+  font-weight:bold;
 }
 
-.category{
-  white-space:nowrap;
-  padding:9px 15px;
-  border-radius:30px;
-  border:1px solid #333;
-  background:#121212;
-  color:#ccc;
-  cursor:pointer;
+.nav a:hover{
+  background:#ddd;
 }
 
-.category.active{
-  background:#e50914;
-  border-color:#e50914;
-  color:#fff;
+.main{
+  padding:15px;
 }
 
 .alphabet{
-  display:flex;
-  gap:7px;
-  overflow-x:auto;
-  margin-bottom:28px;
-}
-
-.alphabet::-webkit-scrollbar{
-  display:none;
-}
-
-.letter{
-  min-width:35px;
-  height:35px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid #333;
-  border-radius:8px;
-  color:#bbb;
-  background:#111;
-}
-
-.font-card{
-  background:#111;
-  border:1px solid #252525;
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:16px;
-  transition:.2s;
-}
-
-.font-card:hover{
-  border-color:#e50914;
-}
-
-.card-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:14px;
-}
-
-.font-name{
-  font-size:18px;
-  font-weight:800;
-}
-
-.badge{
-  font-size:11px;
-  background:#241010;
-  color:#ff5555;
-  padding:6px 9px;
-  border-radius:20px;
-}
-
-.preview{
-  min-height:90px;
-  background:#080808;
-  border:1px solid #222;
-  border-radius:13px;
-  padding:20px 15px;
-  display:flex;
-  align-items:center;
-  font-size:29px;
-  margin-bottom:14px;
-}
-
-.info{
-  color:#777;
-  font-size:12px;
+  border:1px solid #ccc;
+  background:#fafafa;
+  padding:10px;
   margin-bottom:15px;
 }
 
-.actions{
-  display:flex;
-  gap:9px;
+.alphabet-title{
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:8px;
 }
 
-.btn{
-  flex:1;
-  border:0;
-  border-radius:10px;
+.letters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+}
+
+.letter{
+  border:1px solid #bbb;
+  background:white;
+  min-width:29px;
+  height:28px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.letter:hover{
+  background:#e30613;
+  color:white;
+}
+
+.controls{
+  border:1px solid #ccc;
   padding:12px;
+  background:#f7f7f7;
+  margin-bottom:15px;
+}
+
+.controls-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+
+.controls input,
+.controls select{
+  height:36px;
+  border:1px solid #bbb;
+  background:white;
+  padding:0 9px;
+}
+
+.preview-input{
+  min-width:230px;
+  flex:1;
+}
+
+.preview-size{
+  width:90px;
+}
+
+.red-button{
+  height:36px;
+  border:0;
+  background:#e30613;
+  color:#fff;
+  padding:0 16px;
   font-weight:bold;
   cursor:pointer;
 }
 
-.preview-btn{
-  background:#252525;
+.category-box{
+  border:1px solid #ccc;
+  margin-bottom:18px;
+}
+
+.category-title{
+  background:#e30613;
   color:#fff;
+  font-weight:bold;
+  padding:8px 12px;
 }
 
-.download-btn{
-  background:#e50914;
+.categories{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+}
+
+.categories button{
+  border:0;
+  border-right:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  background:#fff;
+  padding:10px 5px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.categories button:hover{
+  background:#eee;
+}
+
+.section-title{
+  background:#e30613;
   color:#fff;
+  padding:8px 12px;
+  font-size:15px;
+  margin:0;
 }
 
-.custom{
-  background:#111;
-  border:1px solid #252525;
-  border-radius:18px;
-  padding:20px;
-  margin-top:30px;
-  margin-bottom:30px;
+.font-card{
+  border:1px solid #ccc;
+  border-top:0;
+  background:#fff;
+  padding:12px;
 }
 
-.custom input{
-  width:100%;
-  background:#080808;
-  border:1px solid #333;
-  color:#fff;
-  padding:14px;
-  border-radius:10px;
-  outline:none;
-  margin-top:12px;
+.font-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#f4f4f4;
+  padding:6px 8px;
+  margin-bottom:10px;
 }
 
-.custom-preview{
-  font-size:30px;
-  margin-top:18px;
-  padding:15px 0;
+.font-name{
+  color:#b00000;
+  font-size:15px;
+  font-weight:bold;
 }
 
-footer{
-  text-align:center;
-  padding:35px 15px;
-  border-top:1px solid #222;
+.font-info{
+  font-size:11px;
   color:#777;
-  font-size:13px;
 }
 
-footer strong{
+.preview-area{
+  min-height:115px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom:1px solid #eee;
+  padding:8px 4px;
+}
+
+.font-preview{
+  font-family:Georgia,serif;
+  font-size:48px;
+  white-space:nowrap;
+}
+
+.font-card:nth-of-type(2) .font-preview{
+  font-family:"Trebuchet MS",sans-serif;
+  font-weight:bold;
+}
+
+.font-card:nth-of-type(3) .font-preview{
+  font-family:cursive;
+}
+
+.font-card:nth-of-type(4) .font-preview{
+  font-family:Impact,Arial,sans-serif;
+}
+
+.font-card:nth-of-type(5) .font-preview{
+  font-family:Georgia,serif;
+  font-style:italic;
+}
+
+.font-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:8px;
+  gap:10px;
+}
+
+.license{
+  font-size:11px;
+  color:#777;
+}
+
+.download{
+  background:#ddd;
+  border:1px solid #bbb;
+  padding:8px 16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.download:hover{
+  background:#ccc;
+}
+
+.more{
+  text-align:center;
+  padding:18px;
+}
+
+.more button{
+  background:#e30613;
   color:#fff;
+  border:0;
+  padding:12px 25px;
+  font-weight:bold;
 }
 
-@media(max-width:600px){
-  .hero h1{
-    font-size:31px;
+.footer{
+  margin-top:30px;
+  background:#eee;
+  border-top:1px solid #ccc;
+  padding:25px 15px;
+  color:#666;
+  font-size:12px;
+  text-align:center;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    flex-direction:column;
+    align-items:stretch;
   }
 
-  .search button{
-    padding:0 13px;
+  .search{
+    max-width:none;
   }
 
-  .preview{
-    font-size:24px;
+  .categories{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .font-preview{
+    font-size:35px;
+  }
+
+  .font-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .download{
+    width:100%;
+  }
+
+  .top-inner{
+    display:none;
+  }
+
+  .logo-text{
+    font-size:21px;
   }
 }
 </style>
@@ -317,310 +398,505 @@ footer strong{
 
 <body>
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <div class="logo">MF</div>
-      <div class="brand-name">MANU <span>Fonts</span></div>
+<!-- TOP -->
+<div class="top">
+  <div class="top-inner">
+    <span>MANU Fonts — Free Font Library</span>
+    <span>Hindi | English | Editing</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+
+    <div class="logo">
+      <div class="logo-box">MF</div>
+      <div class="logo-text">
+        MANU <span>Fonts</span>
+      </div>
     </div>
-    <div class="menu">☰</div>
+
+    <div class="search">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search fonts..."
+        oninput="searchFonts()"
+      >
+      <button onclick="searchFonts()">Search</button>
+    </div>
+
   </div>
 </header>
 
-<section class="hero">
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#">Home</a>
+    <a href="#new">New Fonts</a>
+    <a href="#popular">Popular</a>
+    <a href="#hindi">Hindi</a>
+    <a href="#english">English</a>
+    <a href="#editing">Editing</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
 
-  <h1>Find Your <span>Perfect Font</span></h1>
+<main class="main">
 
-  <p>
-    Hindi, English और Editing के लिए शानदार fonts खोजें,
-    preview करें और डाउनलोड करें।
-  </p>
+<!-- ALPHABET -->
+<div class="alphabet">
 
-  <div class="search">
-    <input
-      id="search"
-      type="text"
-      placeholder="Search fonts..."
-      oninput="searchFonts()"
-    >
-    <button onclick="searchFonts()">Search</button>
+  <div class="alphabet-title">
+    Browse Fonts A-Z
   </div>
 
-</section>
-
-<main class="container">
-
-  <h2 class="section-title">
-    <span>Font</span> Categories
-  </h2>
-
-  <div class="categories">
-
-    <div class="category active" onclick="filterFonts('all',this)">
-      All
-    </div>
-
-    <div class="category" onclick="filterFonts('hindi',this)">
-      Hindi
-    </div>
-
-    <div class="category" onclick="filterFonts('english',this)">
-      English
-    </div>
-
-    <div class="category" onclick="filterFonts('editing',this)">
-      Editing
-    </div>
-
-    <div class="category" onclick="filterFonts('stylish',this)">
-      Stylish
-    </div>
-
-    <div class="category" onclick="filterFonts('bold',this)">
-      Bold
-    </div>
-
+  <div class="letters">
+    <button class="letter" onclick="letterFilter('A')">A</button>
+    <button class="letter" onclick="letterFilter('B')">B</button>
+    <button class="letter" onclick="letterFilter('C')">C</button>
+    <button class="letter" onclick="letterFilter('D')">D</button>
+    <button class="letter" onclick="letterFilter('E')">E</button>
+    <button class="letter" onclick="letterFilter('F')">F</button>
+    <button class="letter" onclick="letterFilter('G')">G</button>
+    <button class="letter" onclick="letterFilter('H')">H</button>
+    <button class="letter" onclick="letterFilter('I')">I</button>
+    <button class="letter" onclick="letterFilter('J')">J</button>
+    <button class="letter" onclick="letterFilter('K')">K</button>
+    <button class="letter" onclick="letterFilter('L')">L</button>
+    <button class="letter" onclick="letterFilter('M')">M</button>
+    <button class="letter" onclick="letterFilter('N')">N</button>
+    <button class="letter" onclick="letterFilter('O')">O</button>
+    <button class="letter" onclick="letterFilter('P')">P</button>
+    <button class="letter" onclick="letterFilter('Q')">Q</button>
+    <button class="letter" onclick="letterFilter('R')">R</button>
+    <button class="letter" onclick="letterFilter('S')">S</button>
+    <button class="letter" onclick="letterFilter('T')">T</button>
+    <button class="letter" onclick="letterFilter('U')">U</button>
+    <button class="letter" onclick="letterFilter('V')">V</button>
+    <button class="letter" onclick="letterFilter('W')">W</button>
+    <button class="letter" onclick="letterFilter('X')">X</button>
+    <button class="letter" onclick="letterFilter('Y')">Y</button>
+    <button class="letter" onclick="letterFilter('Z')">Z</button>
   </div>
 
-  <h2 class="section-title">
-    Browse <span>Fonts</span>
-  </h2>
+</div>
 
-  <div class="alphabet">
-    <div class="letter">A</div>
-    <div class="letter">B</div>
-    <div class="letter">C</div>
-    <div class="letter">D</div>
-    <div class="letter">E</div>
-    <div class="letter">F</div>
-    <div class="letter">G</div>
-    <div class="letter">H</div>
-    <div class="letter">I</div>
-    <div class="letter">J</div>
-    <div class="letter">K</div>
-    <div class="letter">L</div>
-    <div class="letter">M</div>
-  </div>
+<!-- CUSTOM PREVIEW -->
+<div class="controls">
 
-  <div id="fontList">
-
-    <div class="font-card" data-category="hindi">
-
-      <div class="card-top">
-        <div class="font-name">Hindi Stylish Font</div>
-        <div class="badge">NEW</div>
-      </div>
-
-      <div class="preview">
-        नमस्ते भारत
-      </div>
-
-      <div class="info">
-        Hindi • Devanagari • Free Preview
-      </div>
-
-      <div class="actions">
-        <button class="btn preview-btn"
-          onclick="changePreview(this)">
-          Custom Preview
-        </button>
-
-        <button class="btn download-btn"
-          onclick="downloadFont()">
-          Download
-        </button>
-      </div>
-
-    </div>
-
-
-    <div class="font-card" data-category="english">
-
-      <div class="card-top">
-        <div class="font-name">Modern Creator</div>
-        <div class="badge">POPULAR</div>
-      </div>
-
-      <div class="preview">
-        MANU FONTS
-      </div>
-
-      <div class="info">
-        English • Modern • Creator
-      </div>
-
-      <div class="actions">
-        <button class="btn preview-btn"
-          onclick="changePreview(this)">
-          Custom Preview
-        </button>
-
-        <button class="btn download-btn"
-          onclick="downloadFont()">
-          Download
-        </button>
-      </div>
-
-    </div>
-
-
-    <div class="font-card" data-category="editing">
-
-      <div class="card-top">
-        <div class="font-name">Editing Bold</div>
-        <div class="badge">TRENDING</div>
-      </div>
-
-      <div class="preview">
-        EDIT LIKE A PRO
-      </div>
-
-      <div class="info">
-        Editing • YouTube • Shorts • Reels
-      </div>
-
-      <div class="actions">
-        <button class="btn preview-btn"
-          onclick="changePreview(this)">
-          Custom Preview
-        </button>
-
-        <button class="btn download-btn"
-          onclick="downloadFont()">
-          Download
-        </button>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="custom">
-
-    <h2 class="section-title">
-      Try <span>Your Text</span>
-    </h2>
-
-    <p style="color:#888;font-size:13px;">
-      अपना text लिखकर preview देखें।
-    </p>
+  <div class="controls-row">
 
     <input
       id="customText"
-      type="text"
+      class="preview-input"
       value="MANU Fonts"
-      oninput="livePreview()"
+      placeholder="Type your text here..."
+      oninput="changeAllPreview()"
     >
 
-    <div id="livePreview" class="custom-preview">
-      MANU Fonts
-    </div>
+    <select id="fontSize" class="preview-size" onchange="changeSize()">
+      <option value="30">30px</option>
+      <option value="40">40px</option>
+      <option value="50" selected>50px</option>
+      <option value="60">60px</option>
+      <option value="70">70px</option>
+      <option value="80">80px</option>
+    </select>
+
+    <button class="red-button" onclick="changeAllPreview()">
+      Submit
+    </button>
+
+    <button class="red-button" onclick="resetFonts()">
+      Reset
+    </button>
 
   </div>
 
+</div>
+
+<!-- CATEGORIES -->
+<div class="category-box">
+
+  <div class="category-title">
+    Font Categories
+  </div>
+
+  <div class="categories">
+
+    <button onclick="filterCategory('all')">All Fonts</button>
+    <button onclick="filterCategory('fancy')">Fancy</button>
+    <button onclick="filterCategory('retro')">Retro</button>
+    <button onclick="filterCategory('techno')">Techno</button>
+    <button onclick="filterCategory('basic')">Basic</button>
+    <button onclick="filterCategory('script')">Script</button>
+
+    <button onclick="filterCategory('hindi')">Hindi</button>
+    <button onclick="filterCategory('english')">English</button>
+    <button onclick="filterCategory('editing')">Editing</button>
+    <button onclick="filterCategory('bold')">Bold</button>
+    <button onclick="filterCategory('handwritten')">Handwritten</button>
+    <button onclick="filterCategory('stylish')">Stylish</button>
+
+  </div>
+
+</div>
+
+<!-- FONT LIST -->
+<section id="new">
+
+<h2 class="section-title">
+  Recently Added Fonts
+</h2>
+
+
+<!-- FONT 1 -->
+<div class="font-card" data-category="script stylish" data-letter="M">
+
+  <div class="font-head">
+    <div class="font-name">Miracle History</div>
+    <div class="font-info">Script • Stylish</div>
+  </div>
+
+  <div class="preview-area">
+    <div class="font-preview">
+      Miracle History
+    </div>
+  </div>
+
+  <div class="font-bottom">
+    <div class="license">
+      Free Preview • MANU Fonts
+    </div>
+
+    <button class="download"
+      onclick="downloadMessage('Miracle History')">
+      Download
+    </button>
+  </div>
+
+</div>
+
+
+<!-- FONT 2 -->
+<div class="font-card" data-category="handwritten stylish" data-letter="M">
+
+  <div class="font-head">
+    <div class="font-name">Milky Cream</div>
+    <div class="font-info">Handwritten • Stylish</div>
+  </div>
+
+  <div class="preview-area">
+    <div class="font-preview">
+      Milky Cream
+    </div>
+  </div>
+
+  <div class="font-bottom">
+    <div class="license">
+      Free Preview • MANU Fonts
+    </div>
+
+    <button class="download"
+      onclick="downloadMessage('Milky Cream')">
+      Download
+    </button>
+  </div>
+
+</div>
+
+
+<!-- FONT 3 -->
+<div class="font-card" data-category="fancy cartoon" data-letter="T">
+
+  <div class="font-head">
+    <div class="font-name">Taste Bread</div>
+    <div class="font-info">Fancy • Cartoon</div>
+  </div>
+
+  <div class="preview-area">
+    <div class="font-preview">
+      Taste Bread
+    </div>
+  </div>
+
+  <div class="font-bottom">
+    <div class="license">
+      Free Preview • MANU Fonts
+    </div>
+
+    <button class="download"
+      onclick="downloadMessage('Taste Bread')">
+      Download
+    </button>
+  </div>
+
+</div>
+
+
+<!-- FONT 4 -->
+<div class="font-card" data-category="bold editing" data-letter="S">
+
+  <div class="font-head">
+    <div class="font-name">Snowball</div>
+    <div class="font-info">Editing • Bold</div>
+  </div>
+
+  <div class="preview-area">
+    <div class="font-preview">
+      Snowball
+    </div>
+  </div>
+
+  <div class="font-bottom">
+    <div class="license">
+      Free Preview • MANU Fonts
+    </div>
+
+    <button class="download"
+      onclick="downloadMessage('Snowball')">
+      Download
+    </button>
+  </div>
+
+</div>
+
+
+<!-- FONT 5 -->
+<div class="font-card" data-category="techno english bold" data-letter="R">
+
+  <div class="font-head">
+    <div class="font-name">Relidux</div>
+    <div class="font-info">Techno • English • Bold</div>
+  </div>
+
+  <div class="preview-area">
+    <div class="font-preview">
+      RELIDUX
+    </div>
+  </div>
+
+  <div class="font-bottom">
+    <div class="license">
+      Free Preview • MANU Fonts
+    </div>
+
+    <button class="download"
+      onclick="downloadMessage('Relidux')">
+      Download
+    </button>
+  </div>
+
+</div>
+
+
+<!-- HINDI -->
+<div class="font-card" data-category="hindi stylish" data-letter="N">
+
+  <div class="font-head">
+    <div class="font-name">नमस्ते भारत</div>
+    <div class="font-info">Hindi • Devanagari • Stylish</div>
+  </div>
+
+  <div class="preview-area">
+    <div class="font-preview">
+      नमस्ते भारत
+    </div>
+  </div>
+
+  <div class="font-bottom">
+    <div class="license">
+      Hindi Preview • MANU Fonts
+    </div>
+
+    <button class="download"
+      onclick="downloadMessage('Hindi Font')">
+      Download
+    </button>
+  </div>
+
+</div>
+
+</section>
+
+
+<div class="more">
+  <button onclick="loadMore()">
+    Load More Fonts
+  </button>
+</div>
+
+
+<!-- FAQ -->
+<section id="faq">
+
+<h2 class="section-title">
+  About MANU Fonts
+</h2>
+
+<div style="padding:15px;border:1px solid #ccc;font-size:14px;line-height:1.7;">
+
+  <b>MANU Fonts</b> एक font library है जहाँ Hindi,
+  English और Editing fonts को आसानी से search,
+  preview और download किया जा सकेगा।
+
+  <br><br>
+
+  नए fonts समय के साथ यहाँ जोड़े जाएंगे।
+
+</div>
+
+</section>
+
 </main>
 
-<footer>
 
-  <strong>MANU Fonts</strong>
+<!-- FOOTER -->
+<footer class="footer">
 
-  <br><br>
+  <div class="footer-inner">
 
-  Premium Hindi & English Fonts
+    <b>MANU Fonts</b><br><br>
 
-  <br><br>
+    Hindi • English • Editing Fonts
 
-  © 2026 MANU Fonts
+    <br><br>
+
+    © 2026 MANU Fonts
+
+  </div>
 
 </footer>
 
 
 <script>
 
+function changeAllPreview(){
+
+  let text =
+    document.getElementById("customText").value;
+
+  if(text.trim()===""){
+    text="MANU Fonts";
+  }
+
+  document.querySelectorAll(".font-preview")
+  .forEach(function(el){
+    el.innerText=text;
+  });
+
+}
+
+
+function changeSize(){
+
+  let size =
+    document.getElementById("fontSize").value;
+
+  document.querySelectorAll(".font-preview")
+  .forEach(function(el){
+    el.style.fontSize=size+"px";
+  });
+
+}
+
+
 function searchFonts(){
 
-  const value =
-    document.getElementById("search")
+  let search =
+    document.getElementById("searchInput")
     .value
-    .toLowerCase();
+    .toLowerCase()
+    .trim();
 
   document.querySelectorAll(".font-card")
-  .forEach(card => {
+  .forEach(function(card){
 
-    const text =
+    let text =
       card.innerText.toLowerCase();
 
     card.style.display =
-      text.includes(value) ? "block" : "none";
+      text.includes(search) ? "block" : "none";
 
   });
 
 }
 
 
-function filterFonts(category,button){
-
-  document.querySelectorAll(".category")
-  .forEach(x =>
-    x.classList.remove("active")
-  );
-
-  button.classList.add("active");
+function filterCategory(category){
 
   document.querySelectorAll(".font-card")
-  .forEach(card => {
+  .forEach(function(card){
 
-    if(
-      category === "all" ||
-      card.dataset.category === category
-    ){
+    if(category==="all"){
       card.style.display="block";
-    }else{
-      card.style.display="none";
+      return;
     }
+
+    let categories =
+      card.dataset.category || "";
+
+    card.style.display =
+      categories.includes(category)
+      ? "block"
+      : "none";
 
   });
 
 }
 
 
-function changePreview(button){
+function letterFilter(letter){
 
-  const text =
-    prompt(
-      "अपना Preview Text लिखें:",
-      "MANU Fonts"
-    );
+  document.querySelectorAll(".font-card")
+  .forEach(function(card){
 
-  if(text){
+    let first =
+      card.dataset.letter || "";
 
-    const card =
-      button.closest(".font-card");
+    card.style.display =
+      first===letter ? "block" : "none";
 
-    card.querySelector(".preview")
-    .innerText=text;
-
-  }
+  });
 
 }
 
 
-function livePreview(){
+function resetFonts(){
 
-  const text =
-    document.getElementById("customText").value;
+  document.getElementById("searchInput").value="";
+  document.getElementById("customText").value="MANU Fonts";
 
-  document.getElementById("livePreview")
-  .innerText=text;
+  document.querySelectorAll(".font-card")
+  .forEach(function(card){
+    card.style.display="block";
+  });
+
+  document.querySelectorAll(".font-preview")
+  .forEach(function(el){
+    el.innerText="MANU Fonts";
+    el.style.fontSize="50px";
+  });
 
 }
 
 
-function downloadFont(){
+function downloadMessage(font){
 
   alert(
-    "असली font file जोड़ने के बाद यह Download button काम करेगा।"
+    font +
+    " का असली Download तभी शुरू होगा जब उसकी licensed font file MANU Fonts में जोड़ दी जाएगी।"
+  );
+
+}
+
+
+function loadMore(){
+
+  alert(
+    "अगले चरण में यहाँ 50, 100 या 500 fonts की पूरी library जोड़ी जाएगी।"
   );
 
 }
@@ -628,4 +904,4 @@ function downloadFont(){
 </script>
 
 </body>
-</html>
+</html>       
