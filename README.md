@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MANU Fonts - Free Font Library</title>
+<title>MANU Fonts - Free Hindi & English Fonts</title>
 
 <style>
 *{
@@ -18,10 +18,6 @@ body{
   font-family:Arial,"Noto Sans Devanagari",sans-serif;
 }
 
-button,input,select{
-  font-family:inherit;
-}
-
 .top{
   background:#111;
   color:#fff;
@@ -31,8 +27,7 @@ button,input,select{
 
 .top-inner,
 .header-inner,
-.main,
-.footer-inner{
+.main{
   max-width:1100px;
   margin:auto;
 }
@@ -156,7 +151,7 @@ button,input,select{
 
 .letter{
   border:1px solid #bbb;
-  background:white;
+  background:#fff;
   min-width:29px;
   height:28px;
   display:flex;
@@ -168,7 +163,7 @@ button,input,select{
 
 .letter:hover{
   background:#e30613;
-  color:white;
+  color:#fff;
 }
 
 .controls{
@@ -189,7 +184,7 @@ button,input,select{
 .controls select{
   height:36px;
   border:1px solid #bbb;
-  background:white;
+  background:#fff;
   padding:0 9px;
 }
 
@@ -297,22 +292,8 @@ button,input,select{
   white-space:nowrap;
 }
 
-.font-card:nth-of-type(2) .font-preview{
-  font-family:"Trebuchet MS",sans-serif;
-  font-weight:bold;
-}
-
-.font-card:nth-of-type(3) .font-preview{
-  font-family:cursive;
-}
-
-.font-card:nth-of-type(4) .font-preview{
-  font-family:Impact,Arial,sans-serif;
-}
-
-.font-card:nth-of-type(5) .font-preview{
-  font-family:Georgia,serif;
-  font-style:italic;
+.poppins-preview{
+  font-family:"Poppins",sans-serif;
 }
 
 .font-bottom{
@@ -353,6 +334,8 @@ button,input,select{
   padding:8px 16px;
   font-weight:bold;
   cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
 }
 
 .download:hover{
@@ -414,6 +397,7 @@ button,input,select{
   .share,
   .download{
     flex:1;
+    text-align:center;
   }
 
   .top-inner{
@@ -423,6 +407,15 @@ button,input,select{
   .logo-text{
     font-size:21px;
   }
+}
+
+/* Poppins Regular */
+@font-face{
+  font-family:"Poppins";
+  src:url("Poppins-Regular.ttf") format("truetype");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
 }
 </style>
 </head>
@@ -441,6 +434,7 @@ button,input,select{
 
     <div class="logo">
       <div class="logo-box">MF</div>
+
       <div class="logo-text">
         MANU <span>Fonts</span>
       </div>
@@ -453,7 +447,10 @@ button,input,select{
         placeholder="Search fonts..."
         oninput="searchFonts()"
       >
-      <button onclick="searchFonts()">Search</button>
+
+      <button onclick="searchFonts()">
+        Search
+      </button>
     </div>
 
   </div>
@@ -467,7 +464,6 @@ button,input,select{
     <a href="#hindi">Hindi</a>
     <a href="#english">English</a>
     <a href="#editing">Editing</a>
-    <a href="#faq">FAQ</a>
   </div>
 </nav>
 
@@ -522,7 +518,11 @@ button,input,select{
       oninput="changeAllPreview()"
     >
 
-    <select id="fontSize" class="preview-size" onchange="changeSize()">
+    <select
+      id="fontSize"
+      class="preview-size"
+      onchange="changeSize()"
+    >
       <option value="30">30px</option>
       <option value="40">40px</option>
       <option value="50" selected>50px</option>
@@ -575,16 +575,97 @@ button,input,select{
   Recently Added Fonts
 </h2>
 
-<div class="font-card" data-category="script stylish" data-letter="M">
+
+<!-- Poppins -->
+
+<div
+  class="font-card"
+  data-category="basic english editing"
+  data-letter="P"
+>
 
   <div class="font-head">
-    <div class="font-name">Miracle History</div>
-    <div class="font-info">Script • Stylish</div>
+
+    <div class="font-name">
+      Poppins
+    </div>
+
+    <div class="font-info">
+      English • Basic • Editing
+    </div>
+
   </div>
 
+
   <div class="preview-area">
-    <div class="font-preview">Miracle History</div>
+
+    <div class="font-preview poppins-preview">
+      MANU Fonts
+    </div>
+
   </div>
+
+
+  <div class="font-bottom">
+
+    <div class="license">
+      Poppins Regular • Free Font
+    </div>
+
+    <div class="actions">
+
+      <button
+        class="share"
+        onclick="shareFont('Poppins')"
+      >
+        ↗ Share
+      </button>
+
+
+      <a
+        class="download"
+        href="Poppins-Regular.ttf"
+        download="Poppins-Regular.ttf"
+      >
+        ↓ Download
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Miracle History -->
+
+<div
+  class="font-card"
+  data-category="script stylish"
+  data-letter="M"
+>
+
+  <div class="font-head">
+
+    <div class="font-name">
+      Miracle History
+    </div>
+
+    <div class="font-info">
+      Script • Stylish
+    </div>
+
+  </div>
+
+
+  <div class="preview-area">
+
+    <div class="font-preview">
+      Miracle History
+    </div>
+
+  </div>
+
 
   <div class="font-bottom">
 
@@ -594,13 +675,17 @@ button,input,select{
 
     <div class="actions">
 
-      <button class="share"
-        onclick="shareFont('Miracle History')">
+      <button
+        class="share"
+        onclick="shareFont('Miracle History')"
+      >
         ↗ Share
       </button>
 
-      <button class="download"
-        onclick="downloadMessage('Miracle History')">
+      <button
+        class="download"
+        onclick="downloadMessage('Miracle History')"
+      >
         ↓ Download
       </button>
 
@@ -611,16 +696,35 @@ button,input,select{
 </div>
 
 
-<div class="font-card" data-category="handwritten stylish" data-letter="M">
+<!-- Milky Cream -->
+
+<div
+  class="font-card"
+  data-category="handwritten stylish"
+  data-letter="M"
+>
 
   <div class="font-head">
-    <div class="font-name">Milky Cream</div>
-    <div class="font-info">Handwritten • Stylish</div>
+
+    <div class="font-name">
+      Milky Cream
+    </div>
+
+    <div class="font-info">
+      Handwritten • Stylish
+    </div>
+
   </div>
 
+
   <div class="preview-area">
-    <div class="font-preview">Milky Cream</div>
+
+    <div class="font-preview">
+      Milky Cream
+    </div>
+
   </div>
+
 
   <div class="font-bottom">
 
@@ -630,13 +734,17 @@ button,input,select{
 
     <div class="actions">
 
-      <button class="share"
-        onclick="shareFont('Milky Cream')">
+      <button
+        class="share"
+        onclick="shareFont('Milky Cream')"
+      >
         ↗ Share
       </button>
 
-      <button class="download"
-        onclick="downloadMessage('Milky Cream')">
+      <button
+        class="download"
+        onclick="downloadMessage('Milky Cream')"
+      >
         ↓ Download
       </button>
 
@@ -647,16 +755,35 @@ button,input,select{
 </div>
 
 
-<div class="font-card" data-category="fancy" data-letter="T">
+<!-- Taste Bread -->
+
+<div
+  class="font-card"
+  data-category="fancy"
+  data-letter="T"
+>
 
   <div class="font-head">
-    <div class="font-name">Taste Bread</div>
-    <div class="font-info">Fancy</div>
+
+    <div class="font-name">
+      Taste Bread
+    </div>
+
+    <div class="font-info">
+      Fancy
+    </div>
+
   </div>
 
+
   <div class="preview-area">
-    <div class="font-preview">Taste Bread</div>
+
+    <div class="font-preview">
+      Taste Bread
+    </div>
+
   </div>
+
 
   <div class="font-bottom">
 
@@ -666,13 +793,17 @@ button,input,select{
 
     <div class="actions">
 
-      <button class="share"
-        onclick="shareFont('Taste Bread')">
+      <button
+        class="share"
+        onclick="shareFont('Taste Bread')"
+      >
         ↗ Share
       </button>
 
-      <button class="download"
-        onclick="downloadMessage('Taste Bread')">
+      <button
+        class="download"
+        onclick="downloadMessage('Taste Bread')"
+      >
         ↓ Download
       </button>
 
@@ -683,88 +814,35 @@ button,input,select{
 </div>
 
 
-<div class="font-card" data-category="bold editing" data-letter="S">
+<!-- Hindi -->
+
+<div
+  class="font-card"
+  data-category="hindi stylish"
+  data-letter="N"
+>
 
   <div class="font-head">
-    <div class="font-name">Snowball</div>
-    <div class="font-info">Editing • Bold</div>
+
+    <div class="font-name">
+      नमस्ते भारत
+    </div>
+
+    <div class="font-info">
+      Hindi • Devanagari • Stylish
+    </div>
+
   </div>
+
 
   <div class="preview-area">
-    <div class="font-preview">Snowball</div>
-  </div>
 
-  <div class="font-bottom">
-
-    <div class="license">
-      Free Preview • MANU Fonts
-    </div>
-
-    <div class="actions">
-
-      <button class="share"
-        onclick="shareFont('Snowball')">
-        ↗ Share
-      </button>
-
-      <button class="download"
-        onclick="downloadMessage('Snowball')">
-        ↓ Download
-      </button>
-
+    <div class="font-preview">
+      नमस्ते भारत
     </div>
 
   </div>
 
-</div>
-
-
-<div class="font-card" data-category="techno english bold" data-letter="R">
-
-  <div class="font-head">
-    <div class="font-name">Relidux</div>
-    <div class="font-info">Techno • English • Bold</div>
-  </div>
-
-  <div class="preview-area">
-    <div class="font-preview">RELIDUX</div>
-  </div>
-
-  <div class="font-bottom">
-
-    <div class="license">
-      Free Preview • MANU Fonts
-    </div>
-
-    <div class="actions">
-
-      <button class="share"
-        onclick="shareFont('Relidux')">
-        ↗ Share
-      </button>
-
-      <button class="download"
-        onclick="downloadMessage('Relidux')">
-        ↓ Download
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<div class="font-card" data-category="hindi stylish" data-letter="N">
-
-  <div class="font-head">
-    <div class="font-name">नमस्ते भारत</div>
-    <div class="font-info">Hindi • Devanagari • Stylish</div>
-  </div>
-
-  <div class="preview-area">
-    <div class="font-preview">नमस्ते भारत</div>
-  </div>
 
   <div class="font-bottom">
 
@@ -774,13 +852,17 @@ button,input,select{
 
     <div class="actions">
 
-      <button class="share"
-        onclick="shareFont('Hindi Font')">
+      <button
+        class="share"
+        onclick="shareFont('Hindi Font')"
+      >
         ↗ Share
       </button>
 
-      <button class="download"
-        onclick="downloadMessage('Hindi Font')">
+      <button
+        class="download"
+        onclick="downloadMessage('Hindi Font')"
+      >
         ↓ Download
       </button>
 
@@ -794,48 +876,25 @@ button,input,select{
 
 
 <div class="more">
+
   <button onclick="loadMore()">
     Load More Fonts
   </button>
-</div>
-
-
-<section id="faq">
-
-<h2 class="section-title">
-  About MANU Fonts
-</h2>
-
-<div style="padding:15px;border:1px solid #ccc;font-size:14px;line-height:1.7;">
-
-  <b>MANU Fonts</b> एक font library है जहाँ Hindi,
-  English और Editing fonts को आसानी से search,
-  preview और share किया जा सकेगा।
-
-  <br><br>
-
-  नए fonts समय के साथ यहाँ जोड़े जाएंगे।
 
 </div>
-
-</section>
-
-</main>
 
 
 <footer class="footer">
 
-  <div class="footer-inner">
+  <b>MANU Fonts</b>
 
-    <b>MANU Fonts</b><br><br>
+  <br><br>
 
-    Hindi • English • Editing Fonts
+  Hindi • English • Editing Fonts
 
-    <br><br>
+  <br><br>
 
-    © 2026 MANU Fonts
-
-  </div>
+  © 2026 MANU Fonts
 
 </footer>
 
@@ -844,132 +903,179 @@ button,input,select{
 
 function changeAllPreview(){
 
-  let text =
-    document.getElementById("customText").value;
+  const text =
+    document.getElementById("customText").value.trim()
+    || "MANU Fonts";
 
-  if(text.trim()===""){
-    text="MANU Fonts";
-  }
+  document
+    .querySelectorAll(".font-preview")
+    .forEach(function(el){
 
-  document.querySelectorAll(".font-preview")
-  .forEach(function(el){
-    el.innerText=text;
-  });
+      el.innerText = text;
+
+    });
 
 }
 
 
 function changeSize(){
 
-  let size =
+  const size =
     document.getElementById("fontSize").value;
 
-  document.querySelectorAll(".font-preview")
-  .forEach(function(el){
-    el.style.fontSize=size+"px";
-  });
+  document
+    .querySelectorAll(".font-preview")
+    .forEach(function(el){
+
+      el.style.fontSize = size + "px";
+
+    });
 
 }
 
 
 function searchFonts(){
 
-  let search =
-    document.getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
+  const search =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
 
-  document.querySelectorAll(".font-card")
-  .forEach(function(card){
+  document
+    .querySelectorAll(".font-card")
+    .forEach(function(card){
 
-    let text =
-      card.innerText.toLowerCase();
+      const text =
+        card.innerText.toLowerCase();
 
-    card.style.display =
-      text.includes(search) ? "block" : "none";
+      card.style.display =
+        text.includes(search)
+        ? "block"
+        : "none";
 
-  });
+    });
 
 }
 
 
 function filterCategory(category){
 
-  document.querySelectorAll(".font-card")
-  .forEach(function(card){
+  document
+    .querySelectorAll(".font-card")
+    .forEach(function(card){
 
-    if(category==="all"){
-      card.style.display="block";
-      return;
-    }
+      if(category === "all"){
 
-    let categories =
-      card.dataset.category || "";
+        card.style.display = "block";
+        return;
 
-    card.style.display =
-      categories.includes(category)
-      ? "block"
-      : "none";
+      }
 
-  });
+      const categories =
+        card.dataset.category || "";
+
+      card.style.display =
+        categories.includes(category)
+        ? "block"
+        : "none";
+
+    });
 
 }
 
 
 function letterFilter(letter){
 
-  document.querySelectorAll(".font-card")
-  .forEach(function(card){
+  document
+    .querySelectorAll(".font-card")
+    .forEach(function(card){
 
-    let first =
-      card.dataset.letter || "";
+      const first =
+        card.dataset.letter || "";
 
-    card.style.display =
-      first===letter ? "block" : "none";
+      card.style.display =
+        first === letter
+        ? "block"
+        : "none";
 
-  });
+    });
 
 }
 
 
 function resetFonts(){
 
-  document.getElementById("searchInput").value="";
-  document.getElementById("customText").value="MANU Fonts";
+  document.getElementById("searchInput").value =
+    "";
 
-  document.querySelectorAll(".font-card")
-  .forEach(function(card){
-    card.style.display="block";
-  });
+  document.getElementById("customText").value =
+    "MANU Fonts";
 
-  document.querySelectorAll(".font-preview")
-  .forEach(function(el){
-    el.innerText="MANU Fonts";
-    el.style.fontSize="50px";
-  });
+  document.getElementById("fontSize").value =
+    "50";
+
+  document
+    .querySelectorAll(".font-card")
+    .forEach(function(card){
+
+      card.style.display = "block";
+
+    });
+
+  document
+    .querySelectorAll(".font-preview")
+    .forEach(function(el){
+
+      el.innerText = "MANU Fonts";
+      el.style.fontSize = "50px";
+
+    });
 
 }
 
 
 function shareFont(font){
 
-  let shareData = {
+  const shareData = {
+
     title: font + " - MANU Fonts",
-    text: "Check out " + font + " on MANU Fonts.",
+
+    text:
+      "Check out " +
+      font +
+      " on MANU Fonts.",
+
     url: window.location.href
+
   };
+
 
   if(navigator.share){
 
-    navigator.share(shareData)
+    navigator
+      .share(shareData)
       .catch(function(){});
 
   }else{
 
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(function(){
 
-    alert("Website link copy हो गया। अब आप इसे किसी को भी भेज सकते हैं।");
+        alert(
+          "MANU Fonts का link copy हो गया।"
+        );
+
+      })
+      .catch(function(){
+
+        alert(
+          "इस browser में Share उपलब्ध नहीं है।"
+        );
+
+      });
 
   }
 
@@ -980,7 +1086,7 @@ function downloadMessage(font){
 
   alert(
     font +
-    " का असली Download तभी शुरू होगा जब उसकी licensed font file MANU Fonts में जोड़ दी जाएगी।"
+    " की असली font file अभी उपलब्ध नहीं है।"
   );
 
 }
@@ -989,7 +1095,7 @@ function downloadMessage(font){
 function loadMore(){
 
   alert(
-    "अगले चरण में यहाँ और fonts की पूरी library जोड़ी जाएगी।"
+    "और fonts जल्द जोड़े जाएंगे।"
   );
 
 }
