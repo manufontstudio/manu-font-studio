@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MANU Fonts — Free Font Library</title>
+<title>MANU Fonts - Free Font Library</title>
 
 <style>
 *{
@@ -18,9 +18,8 @@ body{
   font-family:Arial,"Noto Sans Devanagari",sans-serif;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+button,input,select{
+  font-family:inherit;
 }
 
 .top{
@@ -70,7 +69,7 @@ a{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:22px;
+  font-size:21px;
   font-weight:900;
   border-radius:5px;
 }
@@ -105,6 +104,7 @@ a{
   background:#222;
   color:#fff;
   font-weight:bold;
+  cursor:pointer;
 }
 
 .nav{
@@ -123,6 +123,8 @@ a{
   padding:11px 14px;
   font-size:14px;
   font-weight:bold;
+  color:#111;
+  text-decoration:none;
 }
 
 .nav a:hover{
@@ -210,6 +212,10 @@ a{
   cursor:pointer;
 }
 
+.red-button:hover{
+  background:#b9000a;
+}
+
 .category-box{
   border:1px solid #ccc;
   margin-bottom:18px;
@@ -261,7 +267,7 @@ a{
   justify-content:space-between;
   align-items:center;
   background:#f4f4f4;
-  padding:6px 8px;
+  padding:7px 8px;
   margin-bottom:10px;
 }
 
@@ -287,7 +293,7 @@ a{
 
 .font-preview{
   font-family:Georgia,serif;
-  font-size:48px;
+  font-size:50px;
   white-space:nowrap;
 }
 
@@ -313,8 +319,13 @@ a{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding-top:8px;
-  gap:10px;
+  padding-top:9px;
+  gap:8px;
+}
+
+.actions{
+  display:flex;
+  gap:7px;
 }
 
 .license{
@@ -322,16 +333,30 @@ a{
   color:#777;
 }
 
-.download{
-  background:#ddd;
+.share{
+  background:#eee;
+  color:#111;
   border:1px solid #bbb;
+  padding:8px 14px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.share:hover{
+  background:#ddd;
+}
+
+.download{
+  background:#e30613;
+  color:#fff;
+  border:1px solid #b00000;
   padding:8px 16px;
   font-weight:bold;
   cursor:pointer;
 }
 
 .download:hover{
-  background:#ccc;
+  background:#b00000;
 }
 
 .more{
@@ -345,6 +370,7 @@ a{
   border:0;
   padding:12px 25px;
   font-weight:bold;
+  cursor:pointer;
 }
 
 .footer{
@@ -381,8 +407,13 @@ a{
     flex-direction:column;
   }
 
-  .download{
+  .actions{
     width:100%;
+  }
+
+  .share,
+  .download{
+    flex:1;
   }
 
   .top-inner{
@@ -398,15 +429,13 @@ a{
 
 <body>
 
-<!-- TOP -->
 <div class="top">
   <div class="top-inner">
-    <span>MANU Fonts — Free Font Library</span>
+    <span>MANU Fonts - Free Font Library</span>
     <span>Hindi | English | Editing</span>
   </div>
 </div>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
 
@@ -430,7 +459,6 @@ a{
   </div>
 </header>
 
-<!-- NAVIGATION -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="#">Home</a>
@@ -445,7 +473,6 @@ a{
 
 <main class="main">
 
-<!-- ALPHABET -->
 <div class="alphabet">
 
   <div class="alphabet-title">
@@ -483,7 +510,6 @@ a{
 
 </div>
 
-<!-- CUSTOM PREVIEW -->
 <div class="controls">
 
   <div class="controls-row">
@@ -517,7 +543,6 @@ a{
 
 </div>
 
-<!-- CATEGORIES -->
 <div class="category-box">
 
   <div class="category-title">
@@ -544,15 +569,12 @@ a{
 
 </div>
 
-<!-- FONT LIST -->
 <section id="new">
 
 <h2 class="section-title">
   Recently Added Fonts
 </h2>
 
-
-<!-- FONT 1 -->
 <div class="font-card" data-category="script stylish" data-letter="M">
 
   <div class="font-head">
@@ -561,26 +583,34 @@ a{
   </div>
 
   <div class="preview-area">
-    <div class="font-preview">
-      Miracle History
-    </div>
+    <div class="font-preview">Miracle History</div>
   </div>
 
   <div class="font-bottom">
+
     <div class="license">
       Free Preview • MANU Fonts
     </div>
 
-    <button class="download"
-      onclick="downloadMessage('Miracle History')">
-      Download
-    </button>
+    <div class="actions">
+
+      <button class="share"
+        onclick="shareFont('Miracle History')">
+        ↗ Share
+      </button>
+
+      <button class="download"
+        onclick="downloadMessage('Miracle History')">
+        ↓ Download
+      </button>
+
+    </div>
+
   </div>
 
 </div>
 
 
-<!-- FONT 2 -->
 <div class="font-card" data-category="handwritten stylish" data-letter="M">
 
   <div class="font-head">
@@ -589,54 +619,70 @@ a{
   </div>
 
   <div class="preview-area">
-    <div class="font-preview">
-      Milky Cream
-    </div>
+    <div class="font-preview">Milky Cream</div>
   </div>
 
   <div class="font-bottom">
+
     <div class="license">
       Free Preview • MANU Fonts
     </div>
 
-    <button class="download"
-      onclick="downloadMessage('Milky Cream')">
-      Download
-    </button>
+    <div class="actions">
+
+      <button class="share"
+        onclick="shareFont('Milky Cream')">
+        ↗ Share
+      </button>
+
+      <button class="download"
+        onclick="downloadMessage('Milky Cream')">
+        ↓ Download
+      </button>
+
+    </div>
+
   </div>
 
 </div>
 
 
-<!-- FONT 3 -->
-<div class="font-card" data-category="fancy cartoon" data-letter="T">
+<div class="font-card" data-category="fancy" data-letter="T">
 
   <div class="font-head">
     <div class="font-name">Taste Bread</div>
-    <div class="font-info">Fancy • Cartoon</div>
+    <div class="font-info">Fancy</div>
   </div>
 
   <div class="preview-area">
-    <div class="font-preview">
-      Taste Bread
-    </div>
+    <div class="font-preview">Taste Bread</div>
   </div>
 
   <div class="font-bottom">
+
     <div class="license">
       Free Preview • MANU Fonts
     </div>
 
-    <button class="download"
-      onclick="downloadMessage('Taste Bread')">
-      Download
-    </button>
+    <div class="actions">
+
+      <button class="share"
+        onclick="shareFont('Taste Bread')">
+        ↗ Share
+      </button>
+
+      <button class="download"
+        onclick="downloadMessage('Taste Bread')">
+        ↓ Download
+      </button>
+
+    </div>
+
   </div>
 
 </div>
 
 
-<!-- FONT 4 -->
 <div class="font-card" data-category="bold editing" data-letter="S">
 
   <div class="font-head">
@@ -645,26 +691,34 @@ a{
   </div>
 
   <div class="preview-area">
-    <div class="font-preview">
-      Snowball
-    </div>
+    <div class="font-preview">Snowball</div>
   </div>
 
   <div class="font-bottom">
+
     <div class="license">
       Free Preview • MANU Fonts
     </div>
 
-    <button class="download"
-      onclick="downloadMessage('Snowball')">
-      Download
-    </button>
+    <div class="actions">
+
+      <button class="share"
+        onclick="shareFont('Snowball')">
+        ↗ Share
+      </button>
+
+      <button class="download"
+        onclick="downloadMessage('Snowball')">
+        ↓ Download
+      </button>
+
+    </div>
+
   </div>
 
 </div>
 
 
-<!-- FONT 5 -->
 <div class="font-card" data-category="techno english bold" data-letter="R">
 
   <div class="font-head">
@@ -673,26 +727,34 @@ a{
   </div>
 
   <div class="preview-area">
-    <div class="font-preview">
-      RELIDUX
-    </div>
+    <div class="font-preview">RELIDUX</div>
   </div>
 
   <div class="font-bottom">
+
     <div class="license">
       Free Preview • MANU Fonts
     </div>
 
-    <button class="download"
-      onclick="downloadMessage('Relidux')">
-      Download
-    </button>
+    <div class="actions">
+
+      <button class="share"
+        onclick="shareFont('Relidux')">
+        ↗ Share
+      </button>
+
+      <button class="download"
+        onclick="downloadMessage('Relidux')">
+        ↓ Download
+      </button>
+
+    </div>
+
   </div>
 
 </div>
 
 
-<!-- HINDI -->
 <div class="font-card" data-category="hindi stylish" data-letter="N">
 
   <div class="font-head">
@@ -701,20 +763,29 @@ a{
   </div>
 
   <div class="preview-area">
-    <div class="font-preview">
-      नमस्ते भारत
-    </div>
+    <div class="font-preview">नमस्ते भारत</div>
   </div>
 
   <div class="font-bottom">
+
     <div class="license">
       Hindi Preview • MANU Fonts
     </div>
 
-    <button class="download"
-      onclick="downloadMessage('Hindi Font')">
-      Download
-    </button>
+    <div class="actions">
+
+      <button class="share"
+        onclick="shareFont('Hindi Font')">
+        ↗ Share
+      </button>
+
+      <button class="download"
+        onclick="downloadMessage('Hindi Font')">
+        ↓ Download
+      </button>
+
+    </div>
+
   </div>
 
 </div>
@@ -729,7 +800,6 @@ a{
 </div>
 
 
-<!-- FAQ -->
 <section id="faq">
 
 <h2 class="section-title">
@@ -740,7 +810,7 @@ a{
 
   <b>MANU Fonts</b> एक font library है जहाँ Hindi,
   English और Editing fonts को आसानी से search,
-  preview और download किया जा सकेगा।
+  preview और share किया जा सकेगा।
 
   <br><br>
 
@@ -753,7 +823,6 @@ a{
 </main>
 
 
-<!-- FOOTER -->
 <footer class="footer">
 
   <div class="footer-inner">
@@ -883,6 +952,30 @@ function resetFonts(){
 }
 
 
+function shareFont(font){
+
+  let shareData = {
+    title: font + " - MANU Fonts",
+    text: "Check out " + font + " on MANU Fonts.",
+    url: window.location.href
+  };
+
+  if(navigator.share){
+
+    navigator.share(shareData)
+      .catch(function(){});
+
+  }else{
+
+    navigator.clipboard.writeText(window.location.href);
+
+    alert("Website link copy हो गया। अब आप इसे किसी को भी भेज सकते हैं।");
+
+  }
+
+}
+
+
 function downloadMessage(font){
 
   alert(
@@ -896,7 +989,7 @@ function downloadMessage(font){
 function loadMore(){
 
   alert(
-    "अगले चरण में यहाँ 50, 100 या 500 fonts की पूरी library जोड़ी जाएगी।"
+    "अगले चरण में यहाँ और fonts की पूरी library जोड़ी जाएगी।"
   );
 
 }
@@ -904,4 +997,4 @@ function loadMore(){
 </script>
 
 </body>
-</html>       
+</html>
