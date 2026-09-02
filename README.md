@@ -4,176 +4,177 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MANU Fonts - Free Fonts for Everyone</title>
+<title>MANU Fonts - Free Fonts for Video Editing</title>
 
-<meta name="description" content="MANU Fonts - Free Hindi, English and international fonts for video editing, design and creative projects.">
-<meta name="keywords" content="free fonts, MANU Fonts, Hindi fonts, English fonts, video editing fonts, typography">
+<meta name="description"
+content="MANU Fonts - Free fonts for video editing, design, thumbnails and creative projects.">
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
-  background:#0b0712;
+  background:#08070d;
   color:#fff;
   font-family:Arial,sans-serif;
 }
 
-header{
-  background:linear-gradient(135deg,#17082b,#35105c,#13091f);
-  border-bottom:1px solid #3c1c59;
+.container{
+  width:92%;
+  max-width:1100px;
+  margin:auto;
 }
 
-.container{
-  width:min(1100px,92%);
-  margin:auto;
+/* HEADER */
+
+header{
+  background:linear-gradient(135deg,#100a1d,#24103c,#12091d);
+  border-bottom:1px solid #35204b;
 }
 
 .topbar{
   padding:18px 0;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  gap:15px;
+  gap:18px;
 }
 
 .logo{
-  font-size:25px;
+  font-size:24px;
   font-weight:900;
-  letter-spacing:.5px;
+  white-space:nowrap;
 }
 
 .logo span{
-  color:#b86cff;
+  color:#a855f7;
 }
 
-.search{
+/* SEARCH */
+
+.search-box{
+  flex:1;
   display:flex;
-  width:420px;
-  max-width:100%;
 }
 
-.search input{
-  width:100%;
+.search-box input{
+  flex:1;
+  min-width:0;
   padding:13px 15px;
-  border:1px solid #5c337d;
-  border-radius:9px 0 0 9px;
+  border:1px solid #49305d;
+  background:#100b18;
+  color:white;
   outline:none;
-  background:#160d20;
-  color:#fff;
+  border-radius:8px 0 0 8px;
 }
 
-.search button{
+.search-box button{
   border:0;
-  padding:0 18px;
-  border-radius:0 9px 9px 0;
-  background:#9b4dff;
-  color:#fff;
+  padding:0 20px;
+  background:#9333ea;
+  color:white;
   font-weight:bold;
+  border-radius:0 8px 8px 0;
 }
+
+/* HERO */
 
 .hero{
-  text-align:center;
-  padding:70px 10px 75px;
+  padding:65px 0 70px;
 }
 
 .hero h1{
   margin:0;
-  font-size:clamp(35px,7vw,65px);
+  font-size:clamp(38px,7vw,68px);
   line-height:1.05;
 }
 
 .hero h1 span{
-  color:#b96cff;
+  color:#a855f7;
 }
 
 .hero p{
-  color:#c7b8d5;
+  color:#b8a8c6;
+  max-width:650px;
   font-size:17px;
-  margin:18px auto 0;
-  max-width:650px;
+  line-height:1.6;
 }
 
-.hero-search{
-  max-width:650px;
-  margin:30px auto 0;
+/* MAIN SEARCH */
+
+.main-search{
   display:flex;
+  max-width:650px;
+  margin-top:28px;
 }
 
-.hero-search input{
+.main-search input{
   flex:1;
+  min-width:0;
   padding:16px;
-  border:1px solid #623683;
-  border-radius:10px 0 0 10px;
-  background:#100917;
-  color:#fff;
+  border:1px solid #51336a;
+  background:#0e0915;
+  color:white;
   outline:none;
+  border-radius:9px 0 0 9px;
   font-size:15px;
 }
 
-.hero-search button{
+.main-search button{
   border:0;
   padding:0 25px;
-  background:#a44cff;
+  background:#9333ea;
   color:white;
-  border-radius:0 10px 10px 0;
   font-weight:bold;
+  border-radius:0 9px 9px 0;
 }
+
+/* SECTIONS */
 
 section{
-  padding:30px 0;
+  padding:32px 0;
 }
 
-.section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:18px;
-}
-
-.section-title h2{
-  margin:0;
+.title{
   font-size:25px;
+  font-weight:bold;
+  margin-bottom:16px;
 }
 
-.section-title span{
-  color:#a967e8;
-  font-size:13px;
-}
+/* LANGUAGE */
 
-.categories{
+.languages{
   display:grid;
   grid-template-columns:repeat(5,1fr);
   gap:12px;
 }
 
-.category{
-  background:#160d20;
-  border:1px solid #352043;
-  border-radius:12px;
+.language{
+  background:#11101a;
+  border:1px solid #292033;
+  border-radius:10px;
   padding:18px 10px;
   text-align:center;
   cursor:pointer;
-  color:#fff;
 }
 
-.category:hover{
-  border-color:#a44cff;
-  transform:translateY(-2px);
+.language:hover{
+  border-color:#9333ea;
 }
 
-.category .flag{
+.language .flag{
   font-size:25px;
   margin-bottom:8px;
 }
 
-.category b{
+.language small{
   display:block;
+  margin-top:5px;
+  color:#887892;
 }
 
-.category small{
-  color:#927da2;
-}
+/* A-Z */
 
 .az{
   display:flex;
@@ -182,100 +183,80 @@ section{
 }
 
 .az button{
-  width:35px;
-  height:35px;
-  border:1px solid #39244a;
-  border-radius:7px;
-  background:#160d20;
+  width:36px;
+  height:36px;
+  border:1px solid #30243b;
+  background:#11101a;
   color:#fff;
+  border-radius:7px;
   cursor:pointer;
 }
 
 .az button:hover{
-  background:#9b4dff;
+  background:#9333ea;
 }
 
-.controls{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  background:#120a19;
-  border:1px solid #302039;
-  padding:14px;
-  border-radius:10px;
+/* FONT CARD */
+
+.font-card{
+  background:#11101a;
+  border:1px solid #292033;
+  border-radius:13px;
+  padding:18px;
   margin-bottom:15px;
 }
 
-.controls input,
-.controls select{
-  padding:10px;
-  border:1px solid #49305c;
-  background:#0e0813;
-  color:#fff;
-  border-radius:7px;
+.font-card.hidden{
+  display:none;
 }
 
-.controls input{
-  flex:1;
-  min-width:200px;
-}
-
-.font-card{
-  background:#120a19;
-  border:1px solid #332040;
-  border-radius:13px;
-  padding:18px;
-  margin-bottom:14px;
-}
-
-.font-top{
+.font-head{
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:10px;
-  margin-bottom:14px;
+  margin-bottom:15px;
 }
 
 .font-name{
-  font-size:19px;
+  font-size:22px;
   font-weight:bold;
 }
 
-.badge{
-  color:#c28aff;
-  font-size:12px;
+.font-info{
+  color:#a855f7;
+  font-size:13px;
 }
 
 .preview{
-  min-height:110px;
+  background:#09080d;
+  border:1px solid #241a2d;
   border-radius:9px;
-  background:#0b0710;
-  border:1px solid #271832;
+  min-height:110px;
   display:flex;
   align-items:center;
-  padding:15px;
+  padding:18px;
   overflow:hidden;
 }
 
 .preview-text{
-  font-size:50px;
+  font-size:48px;
   white-space:nowrap;
 }
 
-.poppins{
-  font-family:Poppins,Arial,sans-serif;
-}
+/* ACTIONS */
 
-.font-actions{
+.actions{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-top:14px;
   gap:10px;
+  margin-top:15px;
 }
 
-.font-actions small{
-  color:#806d8d;
+.file-name{
+  color:#82728d;
+  font-size:12px;
 }
 
 .buttons{
@@ -283,46 +264,50 @@ section{
   gap:8px;
 }
 
-.share,
-.download{
-  border:0;
+.download,
+.share{
+  padding:10px 16px;
   border-radius:7px;
-  padding:10px 15px;
+  text-decoration:none;
   font-weight:bold;
   cursor:pointer;
-  text-decoration:none;
-}
-
-.share{
-  background:#241531;
-  color:#fff;
-  border:1px solid #53326d;
 }
 
 .download{
-  background:#9b4dff;
-  color:#fff;
+  background:#9333ea;
+  color:white;
 }
 
 .download:hover{
-  background:#b66dff;
+  background:#a855f7;
 }
 
-.empty{
+.share{
+  background:#19131f;
+  border:1px solid #49305d;
+  color:white;
+}
+
+/* NO RESULT */
+
+.no-result{
   display:none;
   text-align:center;
-  padding:30px;
-  color:#a996b3;
+  padding:35px;
+  color:#96869e;
 }
 
+/* FOOTER */
+
 footer{
-  border-top:1px solid #302039;
-  margin-top:30px;
+  margin-top:35px;
   padding:35px 0;
   text-align:center;
-  color:#806d8d;
-  font-size:13px;
+  color:#77677f;
+  border-top:1px solid #292033;
 }
+
+/* POPPINS */
 
 @font-face{
   font-family:"Poppins";
@@ -332,7 +317,9 @@ footer{
   font-display:swap;
 }
 
-@media(max-width:750px){
+/* MOBILE */
+
+@media(max-width:700px){
 
   .topbar{
     flex-direction:column;
@@ -343,28 +330,15 @@ footer{
     text-align:center;
   }
 
-  .categories{
+  .languages{
     grid-template-columns:repeat(2,1fr);
   }
 
   .hero{
-    padding:50px 5px;
+    padding:45px 0 50px;
   }
 
-  .hero-search{
-    display:flex;
-  }
-
-  .hero-search input{
-    min-width:0;
-  }
-
-  .font-top{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-
-  .font-actions{
+  .actions{
     flex-direction:column;
     align-items:stretch;
   }
@@ -373,8 +347,8 @@ footer{
     width:100%;
   }
 
-  .share,
-  .download{
+  .download,
+  .share{
     flex:1;
     text-align:center;
   }
@@ -395,37 +369,48 @@ footer{
 <div class="topbar">
 
 <div class="logo">
-  MANU <span>Fonts</span>
+MANU <span>Fonts</span>
 </div>
 
-<div class="search">
-  <input id="topSearch" placeholder="Search fonts..." oninput="searchFonts()">
-  <button onclick="searchFonts()">Search</button>
+<div class="search-box">
+
+<input
+id="topSearch"
+type="search"
+placeholder="Search fonts..."
+oninput="searchFonts()"
+>
+
+<button onclick="searchFonts()">Search</button>
+
 </div>
 
 </div>
+
 
 <div class="hero">
 
 <h1>
-  Free Fonts For <span>Everyone</span>
+Free Fonts For <span>Video Editing</span>
 </h1>
 
 <p>
-  Discover free fonts for video editing, design, thumbnails,
-  posters and creative projects.
+High-quality fonts for YouTube videos, Reels, Shorts,
+thumbnails and creative projects.
 </p>
 
-<div class="hero-search">
+
+<div class="main-search">
 
 <input
-  id="mainSearch"
-  placeholder="Find your font..."
-  oninput="searchFonts()"
+id="mainSearch"
+type="search"
+placeholder="Find your font..."
+oninput="searchFonts()"
 >
 
 <button onclick="searchFonts()">
-  Find Font
+Find Font
 </button>
 
 </div>
@@ -442,75 +427,70 @@ footer{
 
 <section>
 
-<div class="section-title">
-
-<h2>Browse Fonts by Language</h2>
-
-<span>More languages coming soon</span>
-
+<div class="title">
+Browse Fonts by Language
 </div>
 
+<div class="languages">
 
-<div class="categories">
-
-<div class="category" onclick="languageFilter('english')">
+<div class="language" onclick="filterLanguage('English')">
 <div class="flag">🇬🇧</div>
 <b>English</b>
 <small>International</small>
 </div>
 
-<div class="category" onclick="languageFilter('hindi')">
+<div class="language" onclick="filterLanguage('Hindi')">
 <div class="flag">🇮🇳</div>
 <b>Hindi</b>
 <small>India</small>
 </div>
 
-<div class="category" onclick="languageFilter('spanish')">
+<div class="language">
 <div class="flag">🇪🇸</div>
 <b>Spanish</b>
-<small>Español</small>
+<small>Coming Soon</small>
 </div>
 
-<div class="category" onclick="languageFilter('french')">
+<div class="language">
 <div class="flag">🇫🇷</div>
 <b>French</b>
-<small>Français</small>
+<small>Coming Soon</small>
 </div>
 
-<div class="category" onclick="languageFilter('german')">
+<div class="language">
 <div class="flag">🇩🇪</div>
 <b>German</b>
-<small>Deutsch</small>
+<small>Coming Soon</small>
 </div>
 
-<div class="category" onclick="languageFilter('italian')">
+<div class="language">
 <div class="flag">🇮🇹</div>
 <b>Italian</b>
-<small>Italiano</small>
+<small>Coming Soon</small>
 </div>
 
-<div class="category" onclick="languageFilter('portuguese')">
-<div class="flag">🇵🇹</div>
-<b>Portuguese</b>
-<small>Português</small>
-</div>
-
-<div class="category" onclick="languageFilter('arabic')">
-<div class="flag">🇸🇦</div>
-<b>Arabic</b>
-<small>العربية</small>
-</div>
-
-<div class="category" onclick="languageFilter('japanese')">
+<div class="language">
 <div class="flag">🇯🇵</div>
 <b>Japanese</b>
-<small>日本語</small>
+<small>Coming Soon</small>
 </div>
 
-<div class="category" onclick="languageFilter('korean')">
+<div class="language">
 <div class="flag">🇰🇷</div>
 <b>Korean</b>
-<small>한국어</small>
+<small>Coming Soon</small>
+</div>
+
+<div class="language">
+<div class="flag">🇸🇦</div>
+<b>Arabic</b>
+<small>Coming Soon</small>
+</div>
+
+<div class="language">
+<div class="flag">🇷🇺</div>
+<b>Russian</b>
+<small>Coming Soon</small>
 </div>
 
 </div>
@@ -520,43 +500,38 @@ footer{
 
 <section>
 
-<div class="section-title">
-
-<h2>Browse Fonts A–Z</h2>
-
-<span>All Fonts</span>
-
+<div class="title">
+Browse Fonts A–Z
 </div>
-
 
 <div class="az">
 
-<button onclick="letterFilter('A')">A</button>
-<button onclick="letterFilter('B')">B</button>
-<button onclick="letterFilter('C')">C</button>
-<button onclick="letterFilter('D')">D</button>
-<button onclick="letterFilter('E')">E</button>
-<button onclick="letterFilter('F')">F</button>
-<button onclick="letterFilter('G')">G</button>
-<button onclick="letterFilter('H')">H</button>
-<button onclick="letterFilter('I')">I</button>
-<button onclick="letterFilter('J')">J</button>
-<button onclick="letterFilter('K')">K</button>
-<button onclick="letterFilter('L')">L</button>
-<button onclick="letterFilter('M')">M</button>
-<button onclick="letterFilter('N')">N</button>
-<button onclick="letterFilter('O')">O</button>
-<button onclick="letterFilter('P')">P</button>
-<button onclick="letterFilter('Q')">Q</button>
-<button onclick="letterFilter('R')">R</button>
-<button onclick="letterFilter('S')">S</button>
-<button onclick="letterFilter('T')">T</button>
-<button onclick="letterFilter('U')">U</button>
-<button onclick="letterFilter('V')">V</button>
-<button onclick="letterFilter('W')">W</button>
-<button onclick="letterFilter('X')">X</button>
-<button onclick="letterFilter('Y')">Y</button>
-<button onclick="letterFilter('Z')">Z</button>
+<button onclick="filterLetter('A')">A</button>
+<button onclick="filterLetter('B')">B</button>
+<button onclick="filterLetter('C')">C</button>
+<button onclick="filterLetter('D')">D</button>
+<button onclick="filterLetter('E')">E</button>
+<button onclick="filterLetter('F')">F</button>
+<button onclick="filterLetter('G')">G</button>
+<button onclick="filterLetter('H')">H</button>
+<button onclick="filterLetter('I')">I</button>
+<button onclick="filterLetter('J')">J</button>
+<button onclick="filterLetter('K')">K</button>
+<button onclick="filterLetter('L')">L</button>
+<button onclick="filterLetter('M')">M</button>
+<button onclick="filterLetter('N')">N</button>
+<button onclick="filterLetter('O')">O</button>
+<button onclick="filterLetter('P')">P</button>
+<button onclick="filterLetter('Q')">Q</button>
+<button onclick="filterLetter('R')">R</button>
+<button onclick="filterLetter('S')">S</button>
+<button onclick="filterLetter('T')">T</button>
+<button onclick="filterLetter('U')">U</button>
+<button onclick="filterLetter('V')">V</button>
+<button onclick="filterLetter('W')">W</button>
+<button onclick="filterLetter('X')">X</button>
+<button onclick="filterLetter('Y')">Y</button>
+<button onclick="filterLetter('Z')">Z</button>
 
 </div>
 
@@ -565,55 +540,30 @@ footer{
 
 <section>
 
-<div class="section-title">
-
-<h2>Find Your Font</h2>
-
-</div>
-
-
-<div class="controls">
-
-<input
-  id="customText"
-  value="MANU Fonts"
-  placeholder="Type your text..."
-  oninput="changePreview()"
->
-
-<select id="fontSize" onchange="changePreview()">
-<option value="30">30px</option>
-<option value="40">40px</option>
-<option value="50" selected>50px</option>
-<option value="60">60px</option>
-<option value="70">70px</option>
-<option value="80">80px</option>
-</select>
-
-<button class="share" onclick="resetAll()">
-Reset
-</button>
-
+<div class="title">
+Find Your Font
 </div>
 
 
 <div id="fontList">
 
 
+<!-- POPPINS -->
+
 <div
 class="font-card"
-data-name="poppins"
-data-language="english"
+data-name="Poppins"
+data-language="English"
 data-letter="P"
 >
 
-<div class="font-top">
+<div class="font-head">
 
 <div class="font-name">
 Poppins
 </div>
 
-<div class="badge">
+<div class="font-info">
 English • Regular
 </div>
 
@@ -622,19 +572,21 @@ English • Regular
 
 <div class="preview">
 
-<div class="preview-text poppins" id="poppinsPreview">
+<div
+class="preview-text"
+style="font-family:Poppins,Arial,sans-serif"
+>
 MANU Fonts
 </div>
 
 </div>
 
 
-<div class="font-actions">
+<div class="actions">
 
-<small>
+<div class="file-name">
 Poppins-Regular.ttf • Free Font
-</small>
-
+</div>
 
 <div class="buttons">
 
@@ -644,7 +596,6 @@ onclick="shareFont('Poppins')"
 >
 ↗ Share
 </button>
-
 
 <a
 class="download"
@@ -661,24 +612,149 @@ download="Poppins-Regular.ttf"
 </div>
 
 
+<!-- INTER -->
+
 <div
 class="font-card"
-data-name="hindi"
-data-language="hindi"
+data-name="Inter"
+data-language="English"
+data-letter="I"
+>
+
+<div class="font-head">
+
+<div class="font-name">
+Inter
+</div>
+
+<div class="font-info">
+English • Regular
+</div>
+
+</div>
+
+
+<div class="preview">
+
+<div class="preview-text">
+MANU Fonts
+</div>
+
+</div>
+
+
+<div class="actions">
+
+<div class="file-name">
+Inter-Regular.ttf • Add file to GitHub
+</div>
+
+<div class="buttons">
+
+<button
+class="share"
+onclick="shareFont('Inter')"
+>
+↗ Share
+</button>
+
+<a
+class="download"
+href="Inter-Regular.ttf"
+download="Inter-Regular.ttf"
+>
+↓ Download
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ROBOTO -->
+
+<div
+class="font-card"
+data-name="Roboto"
+data-language="English"
+data-letter="R"
+>
+
+<div class="font-head">
+
+<div class="font-name">
+Roboto
+</div>
+
+<div class="font-info">
+English • Regular
+</div>
+
+</div>
+
+
+<div class="preview">
+
+<div class="preview-text">
+MANU Fonts
+</div>
+
+</div>
+
+
+<div class="actions">
+
+<div class="file-name">
+Roboto-Regular.ttf • Add file to GitHub
+</div>
+
+<div class="buttons">
+
+<button
+class="share"
+onclick="shareFont('Roboto')"
+>
+↗ Share
+</button>
+
+<a
+class="download"
+href="Roboto-Regular.ttf"
+download="Roboto-Regular.ttf"
+>
+↓ Download
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- HINDI -->
+
+<div
+class="font-card"
+data-name="Hindi Font"
+data-language="Hindi"
 data-letter="H"
 >
 
-<div class="font-top">
+<div class="font-head">
 
 <div class="font-name">
 Hindi Font
 </div>
 
-<div class="badge">
+<div class="font-info">
 Hindi • India
 </div>
 
 </div>
+
 
 <div class="preview">
 
@@ -688,11 +764,12 @@ Hindi • India
 
 </div>
 
-<div class="font-actions">
 
-<small>
-Hindi font coming soon
-</small>
+<div class="actions">
+
+<div class="file-name">
+Hindi font • Coming Soon
+</div>
 
 <div class="buttons">
 
@@ -705,7 +782,7 @@ onclick="shareFont('Hindi Font')"
 
 <button
 class="download"
-onclick="comingSoon()"
+onclick="alert('Hindi font की file अभी upload नहीं हुई है।')"
 >
 ↓ Download
 </button>
@@ -720,8 +797,11 @@ onclick="comingSoon()"
 </div>
 
 
-<div id="empty" class="empty">
-No fonts found.
+<div
+id="noResult"
+class="no-result"
+>
+कोई font नहीं मिला।
 </div>
 
 </section>
@@ -735,7 +815,7 @@ No fonts found.
 
 <br><br>
 
-Free fonts for video editing, design and creative projects.
+Free Fonts for Video Editing, Design & Creative Projects.
 
 <br><br>
 
@@ -746,160 +826,158 @@ Free fonts for video editing, design and creative projects.
 
 <script>
 
-function getCards(){
-  return document.querySelectorAll(".font-card");
-}
-
+/* SEARCH */
 
 function searchFonts(){
 
-  let a=document.getElementById("topSearch").value.toLowerCase().trim();
+let top =
+document.getElementById("topSearch").value
+.toLowerCase()
+.trim();
 
-  let b=document.getElementById("mainSearch").value.toLowerCase().trim();
+let main =
+document.getElementById("mainSearch").value
+.toLowerCase()
+.trim();
 
-  let search=b || a;
+let query = main || top;
 
-  let found=0;
+let cards =
+document.querySelectorAll(".font-card");
 
-  getCards().forEach(function(card){
+let found = 0;
 
-    let text=card.innerText.toLowerCase();
+cards.forEach(function(card){
 
-    if(text.includes(search)){
-      card.style.display="block";
-      found++;
-    }else{
-      card.style.display="none";
-    }
+let name =
+card.dataset.name.toLowerCase();
 
-  });
+let language =
+card.dataset.language.toLowerCase();
 
-  document.getElementById("empty").style.display =
-    found ? "none" : "block";
-}
+if(
+query === "" ||
+name.includes(query) ||
+language.includes(query)
+){
 
+card.classList.remove("hidden");
+found++;
 
-function languageFilter(language){
+}else{
 
-  let found=0;
-
-  getCards().forEach(function(card){
-
-    if(card.dataset.language===language){
-
-      card.style.display="block";
-      found++;
-
-    }else{
-
-      card.style.display="none";
-
-    }
-
-  });
-
-  document.getElementById("empty").style.display =
-    found ? "none" : "block";
+card.classList.add("hidden");
 
 }
 
+});
 
-function letterFilter(letter){
-
-  let found=0;
-
-  getCards().forEach(function(card){
-
-    if(card.dataset.letter===letter){
-
-      card.style.display="block";
-      found++;
-
-    }else{
-
-      card.style.display="none";
-
-    }
-
-  });
-
-  document.getElementById("empty").style.display =
-    found ? "none" : "block";
+document.getElementById("noResult").style.display =
+found === 0 ? "block" : "none";
 
 }
 
 
-function changePreview(){
+/* LANGUAGE FILTER */
 
-  let text =
-    document.getElementById("customText").value ||
-    "MANU Fonts";
+function filterLanguage(language){
 
-  let size =
-    document.getElementById("fontSize").value;
+let cards =
+document.querySelectorAll(".font-card");
 
-  document
-    .querySelectorAll(".preview-text")
-    .forEach(function(el){
+let found=0;
 
-      el.innerText=text;
-      el.style.fontSize=size+"px";
+cards.forEach(function(card){
 
-    });
+if(card.dataset.language === language){
+
+card.classList.remove("hidden");
+found++;
+
+}else{
+
+card.classList.add("hidden");
+
+}
+
+});
+
+document.getElementById("noResult").style.display =
+found === 0 ? "block" : "none";
+
+window.scrollTo({
+top:document.getElementById("fontList").offsetTop-50,
+behavior:"smooth"
+});
 
 }
 
 
-function resetAll(){
+/* A-Z FILTER */
 
-  document.getElementById("topSearch").value="";
-  document.getElementById("mainSearch").value="";
-  document.getElementById("customText").value="MANU Fonts";
-  document.getElementById("fontSize").value="50";
+function filterLetter(letter){
 
-  getCards().forEach(function(card){
-    card.style.display="block";
-  });
+let cards =
+document.querySelectorAll(".font-card");
 
-  document.getElementById("empty").style.display="none";
+let found=0;
 
-  changePreview();
+cards.forEach(function(card){
+
+if(card.dataset.letter === letter){
+
+card.classList.remove("hidden");
+found++;
+
+}else{
+
+card.classList.add("hidden");
 
 }
 
+});
+
+document.getElementById("noResult").style.display =
+found === 0 ? "block" : "none";
+
+window.scrollTo({
+top:document.getElementById("fontList").offsetTop-50,
+behavior:"smooth"
+});
+
+}
+
+
+/* SHARE */
 
 function shareFont(font){
 
-  let data={
-    title:font+" - MANU Fonts",
-    text:"Check out "+font+" on MANU Fonts.",
-    url:window.location.href
-  };
+let shareData={
+title:font+" - MANU Fonts",
+text:"Download "+font+" from MANU Fonts.",
+url:window.location.href
+};
 
-  if(navigator.share){
+if(navigator.share){
 
-    navigator.share(data).catch(function(){});
+navigator.share(shareData)
+.catch(function(){});
 
-  }else{
+}else{
 
-    navigator.clipboard.writeText(window.location.href)
-    .then(function(){
-      alert("MANU Fonts का link copy हो गया।");
-    })
-    .catch(function(){
-      alert("Share इस browser में उपलब्ध नहीं है।");
-    });
+navigator.clipboard.writeText(window.location.href)
+.then(function(){
 
-  }
+alert("MANU Fonts का link copy हो गया।");
+
+})
+.catch(function(){
+
+alert("Share इस browser में उपलब्ध नहीं है।");
+
+});
 
 }
-
-
-function comingSoon(){
-
-  alert(
-    "इस font की असली file अभी MANU Fonts पर उपलब्ध नहीं है।"
-  );
 
 }
 
